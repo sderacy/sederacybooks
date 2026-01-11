@@ -3,22 +3,101 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="About | S.E. Deracy">
-    <main class="max-w-3xl mx-auto px-6 py-24">
-        <h1 class="heading-hero text-gold mb-8 text-center">About the Author</h1>
+    <main class="min-h-screen pt-32 pb-24 px-6 relative overflow-hidden">
         
-        <div class="prose prose-invert prose-lg mx-auto text-gray-300 font-serif leading-relaxed">
-            <p>
-                <span class="text-gold font-bold text-2xl float-left mr-2 mt-[-6px]">Placeholder</span> (We'll come back to this later)
-            </p>
+        <div class="absolute top-0 right-0 p-12 opacity-5 pointer-events-none select-none">
+            <pre class="font-mono text-xs text-gold leading-3">
+                01010011 01000101 01000100
+                01000101 01010010 01000001
+                01000011 01011001 00001010
+            </pre>
+        </div>
+
+        <div class="max-w-6xl mx-auto">
             
-            <hr class="border-void-700 my-12" />
-            
-            <h3 class="text-white font-sans uppercase tracking-widest text-sm mb-4">Connect</h3>
-            <ul class="list-none pl-0 flex gap-6">
-                <li><a href="https://github.com/sderacy" class="text-gold hover:text-white transition">GitHub</a></li>
-                <li><a href="#" class="text-gold hover:text-white transition">Instagram</a></li>
-                <li><a href="#" class="text-gold hover:text-white transition">Twitter</a></li>
-            </ul>
+            <header class="mb-16 text-center md:text-left">
+                <span class="text-gold font-bold tracking-[0.2em] text-xs uppercase mb-4 block">
+                    Source Code & Sorcery
+                </span>
+                <h1 class="heading-hero text-white mb-6">
+                    About the <span class="text-gold">Architect</span>
+                </h1>
+            </header>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
+                
+                <div class="md:col-span-5 relative group">
+                    <div class="h-[90%] absolute inset-0 border-2 border-gold translate-x-4 translate-y-4 rounded-sm transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2 pointer-events-none"></div>
+                    
+                    <img 
+                        src="/author.jpg" 
+                        alt="S.E. Deracy" 
+                        class="relative z-10 w-full h-auto grayscale hover:grayscale-0 transition-all duration-700 rounded-sm shadow-2xl"
+                    />
+                    
+                    <div class="mt-12 flex justify-between text-xs font-mono text-gray-500 uppercase tracking-widest border-t border-void-700 pt-4">
+                        <span>Class: Technomancer</span>
+                        <span>Lvl: 25</span>
+                    </div>
+                </div>
+
+                <div class="md:col-span-7 prose prose-invert prose-lg">
+                   <p class="lead text-xl text-gray-300 font-serif leading-relaxed">
+                        <span class="text-gold font-bold text-4xl float-left mr-3 mt-[-10px]">S.</span>
+                        E. Deracy is a software engineer by day and a fantasy author by night. Fascinated by the architecture of complex systems, he applies that same rigorous logic to his writing, crafting hard magic systems where the cost of power is always strictly enforced.
+                    </p>
+
+                    <h3 class="text-white font-serif mt-12 mb-4">The Author</h3>
+                    <p>
+                        He has spent the last three years building the world of Eurion and writing his debut novel, <em>The Elementless Magician</em>. While he spends his days building resilient applications, his nights are dedicated to exploring the Void—a magic system that refuses to be easily categorized.
+                    </p>
+                    <p>
+                        When not writing or coding, he is likely acting as Dungeon Master for a long-running D&D campaign or getting lost in JRPGs and other video games.
+                    </p>
+
+                    <h3 class="text-white font-serif mt-12 mb-4">The Engineer</h3>
+                    <p>
+                        This website is not a template. It is a custom-built application engineered with the same precision as the novels.
+                    </p>
+                    
+                    <div class="not-prose grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6">
+                        <div class="bg-void-800 p-3 rounded text-center border border-void-700 hover:border-gold/30 transition-colors">
+                            <span class="block text-gold font-bold text-sm">Astro</span>
+                            <span class="text-[10px] text-gray-500 uppercase">Framework</span>
+                        </div>
+                        <div class="bg-void-800 p-3 rounded text-center border border-void-700 hover:border-gold/30 transition-colors">
+                            <span class="block text-gold font-bold text-sm">React</span>
+                            <span class="text-[10px] text-gray-500 uppercase">Interactive Map</span>
+                        </div>
+                        <div class="bg-void-800 p-3 rounded text-center border border-void-700 hover:border-gold/30 transition-colors">
+                            <span class="block text-gold font-bold text-sm">Tailwind</span>
+                            <span class="text-[10px] text-gray-500 uppercase">Styling</span>
+                        </div>
+                        <div class="bg-void-800 p-3 rounded text-center border border-void-700 hover:border-gold/30 transition-colors">
+                            <span class="block text-gold font-bold text-sm">GitHub</span>
+                            <span class="text-[10px] text-gray-500 uppercase">CI/CD</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 pt-12 border-t border-void-700">
+                        <h4 class="text-sm font-sans uppercase tracking-widest text-gray-500 mb-6">Connect</h4>
+                        <div class="flex gap-6">
+                            <a href="mailto:contact@sederacy.com" class="flex items-center gap-2 text-white hover:text-gold transition group">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 group-hover:scale-110 transition-transform">
+                                <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                                <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                                </svg>
+                                <span>Email</span>
+                            </a>
+
+                            <a href="https://github.com/sderacy" target="_blank" class="flex items-center gap-2 text-white hover:text-gold transition group">
+                                <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 </Layout>
