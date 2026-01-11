@@ -54,8 +54,8 @@ const featuredBook = featuredSeries.books[0];
                             <a href={featuredBook.amazonLink} target="_blank" class="btn-primary bg-gold text-void-900 hover:bg-white border-none">
                                 Buy Now
                             </a>
-                            <a href="/books" class="btn-secondary">
-                                Read Full Summary
+                            <a href={`/${featuredSeries.id}`} class="btn-secondary">
+                                Read More
                             </a>
                         </div>
                     </div>
