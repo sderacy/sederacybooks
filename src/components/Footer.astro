@@ -1,0 +1,53 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-black border-t border-void-800 pt-16 pb-8 text-center md:text-left relative z-10">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        
+        <div class="md:col-span-2">
+            <a href="/" class="text-2xl font-serif font-bold text-gold tracking-tighter hover:opacity-80 transition block mb-4">
+                S.E. DERACY
+            </a>
+            <p class="text-gray-500 max-w-sm mx-auto md:mx-0 leading-relaxed">
+                Weaving worlds with code and chaos. 
+                Architect of the <em>Elementless</em> universe.
+            </p>
+        </div>
+
+        <div>
+            <h4 class="text-white font-serif uppercase tracking-widest text-sm mb-6">Explore</h4>
+            <ul class="space-y-4 font-sans text-gray-400">
+                <li><a href="/#library" class="hover:text-gold transition">Books</a></li>
+                <li><a href="/map" class="hover:text-gold transition">Atlas of Eurion</a></li>
+                <li><a href="/about" class="hover:text-gold transition">About the Author</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 class="text-white font-serif uppercase tracking-widest text-sm mb-6">Connect</h4>
+            <ul class="space-y-4 font-sans text-gray-400">
+                <li>
+                    <a href="https://github.com/sderacy" target="_blank" class="hover:text-gold transition flex items-center gap-2 justify-center md:justify-start">
+                        GitHub
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="hover:text-gold transition flex items-center gap-2 justify-center md:justify-start">
+                        Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="hover:text-gold transition flex items-center gap-2 justify-center md:justify-start">
+                        Newsletter
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="border-t border-void-800 pt-8 flex flex-col md:flex-row justify-between items-center px-6 max-w-7xl mx-auto text-gray-600 text-sm">
+        <p>&copy; {currentYear} S.E. Deracy. All rights reserved.</p>
+        <p class="mt-2 md:mt-0">Site made with <span class="text-gold"> ❤ </span> by S.E. Deracy.</p>
+    </div>
+</footer>
