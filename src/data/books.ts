@@ -6,15 +6,27 @@ export interface Series {
     books: Book[];
 }
 
+export type CreditDetail = {
+    name: string;
+    url?: string;
+};
+
+export type Credit = string | CreditDetail;
+
 export interface Book {
     title: string;
     cover: string;
     quote: string;
     shortDescription: string;
     description: string;
+    isReleased: boolean;
     amazonLink?: string; // Optional for unreleased books
     releaseDate?: string;
-    isReleased: boolean;
+    credits?: {
+        coverArt?: Credit;
+        editing?: Credit;
+        typography?: Credit;
+    };
 }
 
 export const library: Series[] = [
@@ -34,7 +46,6 @@ export const library: Series[] = [
                 description: `
                     The Velaris name was supposed to be his shield; instead, it became a shadow. Abel spent his life believing his story was already written: a royal heir destined to lead his family and uphold their legacy.
 
-
                     But on the eve of his eighteenth birthday, the illusion shatters. Standing before the Pentad in the most important ceremony of his life, Abel is revealed to be something once thought impossible: Elementless.
 
                     Branded a failure, he believes he is broken. Empty. But his "emptiness" is not an absence of power—it is a conduit for something the world has forgotten entirely: the Void.
@@ -43,7 +54,21 @@ export const library: Series[] = [
                 `,
                 amazonLink: 'https://www.amazon.com/dp/B0GC8Z175L',
                 isReleased: true,
-                releaseDate: 'Available Now'
+                releaseDate: 'Available Now',
+                credits: {
+                    editing: {
+                        name: "P.J. Hoover",
+                        url: "https://www.pjhoover.com",
+                    },
+                    coverArt: {
+                        name: "Bia Wednesday A.",
+                        url: "https://www.fiverr.com/iamjustbia"
+                    },
+                    typography: {
+                        name: "Charlyn Designs",
+                        url: "https://www.fiverr.com/charlyn_designs"
+                    }
+                }
             },
         ]
     }
