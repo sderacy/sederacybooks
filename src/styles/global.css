@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  .heading-hero {
+    @apply font-serif font-bold text-5xl text-magic tracking-wider mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)];
+  }
+  
+  @screen md {
+    .heading-hero {
+      @apply text-7xl;
+    }
+  }
+
+  .heading-section {
+    @apply font-serif font-bold text-3xl text-magic mb-4;
+  }
+
+  @screen md {
+    .heading-section {
+      @apply text-4xl;
+    }
+  }
+
+  .text-body {
+    @apply font-sans text-lg text-gray-300 leading-relaxed;
+  }
+
+  @screen md {
+    .text-body {
+      @apply text-xl;
+    }
+  }
+     
+  .btn-primary {
+    @apply px-8 py-3 rounded-lg font-serif font-bold text-white transition-all duration-300 ease-in-out
+           bg-magic hover:bg-magic-dark 
+           shadow-[0_0_15px_rgba(124,58,237,0.4)] hover:shadow-[0_0_25px_rgba(124,58,237,0.6)]
+           focus:outline-none focus:ring-2 focus:ring-magic-light focus:ring-offset-2 focus:ring-offset-void-900;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3 rounded-lg font-sans font-medium text-gray-300 transition-all duration-300
+           border border-gray-600 hover:border-magic-light hover:text-white
+           hover:bg-void-700
+           focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-void-900;
+  }
+
+  .card-glass {
+    @apply bg-void-800/80 backdrop-blur-md border border-void-700 rounded-xl p-6 shadow-xl;
+  }
+  
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-magic focus:ring-offset-2 focus:ring-offset-void-900;
+  }
+}

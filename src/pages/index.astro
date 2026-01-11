@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { library } from '../data/books';
+
+---
+
+<Layout title="S.E. Deracy | Author & Engineer">
+    <main class="min-h-screen flex flex-col items-center justify-center p-4 md:p-8 relative">
+        
+        <div class="z-10 text-center mb-16">
+            <h1 
+				class="text-6xl md:text-8xl font-serif font-bold text-gold mb-6 tracking-tighter drop-shadow-lg"
+
+			>
+                S.E. DERACY
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 font-sans">
+                Weaving worlds with code and chaos.
+            </p>
+        </div>
+
+        <div class="z-10 w-full max-w-5xl grid grid-cols-1 gap-12">
+            {library.map((series) => {
+                const latestBook = series.books[0];
+                
+                return (
+                    <div class="bg-void-900 border border-void-700 rounded-xl overflow-hidden hover:border-gold transition-colors duration-300 flex flex-col md:flex-row shadow-2xl">
+                        
+						<a href={`/${series.id}`} class="block w-full md:w-72 shrink-0 relative overflow-hidden group border-b md:border-b-0 md:border-r border-void-700">
+							<img 
+								src={latestBook.cover} 
+								alt={latestBook.title} 
+								class="w-full h-auto block transition duration-700 group-hover:scale-105"
+							/>
+						</a>
+
+                        <div class="p-8 flex flex-col justify-center flex-grow">
+                            <div class="mb-auto">
+                                <h3 class="text-gray-500 text-sm uppercase tracking-widest mb-1">Series</h3>
+                                <h2 class="text-3xl md:text-4xl font-serif text-white mb-4">
+                                    <a href={`/${series.id}`} class="hover:text-gold transition" style={`color: ${series.color}`} >
+                                        {series.title}
+                                    </a>
+                                </h2>
+                                <p class="text-gray-400 text-lg mb-6 max-w-2xl">
+                                    {series.description}
+                                </p>
+                            </div>
+                            
+                            <div class="flex flex-wrap gap-4 mt-4">
+                                <a href={`/${series.id}`} class="btn-secondary">
+                                    Explore Series
+                                </a>
+
+                                <a href={latestBook.amazonLink} target="_blank" class="btn-primary">
+                                    Buy Book 1
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                );
+            })}
+        </div>
+    </main>
+</Layout>

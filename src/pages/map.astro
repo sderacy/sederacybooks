@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MapViewer from '../components/MapViewer';
+import { library } from '../data/books';
+
+const series = library.find(s => s.id === 'elementless-magician');
+const seriesColor = series ? series.color : '#d2ac22';
+const backLink = series ? `/${series.id}` : '/';
+---
+
+<Layout title="Atlas of Eurion | The Elementless Magician">
+    
+    <nav class="absolute top-0 left-0 p-6 w-full z-10">
+        <a 
+            href={backLink} 
+            class="font-serif tracking-widest text-sm uppercase transition flex items-center gap-2 hover:text-white"
+            style={`color: ${seriesColor}`}
+        >
+            &larr; Return to Series
+        </a>
+    </nav>
+
+    <main class="max-w-7xl mx-auto p-4 md:p-8 pt-24">
+        <header class="mb-8 text-center">
+            <h1 
+                class="heading-hero mb-2" 
+                style={`color: ${seriesColor}`}
+            >
+                The Lands of Eurion
+            </h1>
+            <p class="text-gray-400 text-lg">
+                Explore the world charted by Milton Pena Negra.
+            </p>
+        </header>
+        
+        <section class="w-full">
+            <MapViewer client:only="react" />
+        </section>
+
+        </main>
+</Layout>
