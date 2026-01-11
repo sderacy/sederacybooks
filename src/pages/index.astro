@@ -8,8 +8,29 @@ const featuredBook = featuredSeries.books[0];
 ---
 
 <Layout title="S.E. Deracy | Author & Engineer">
+    <fragment slot="head">
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Book",
+          "name": "The Elementless Magician",
+          "author": {
+            "@type": "Person",
+            "name": "S.E. Deracy",
+            "url": "https://www.sederacybooks.com"
+          },
+          "workExample": {
+            "@type": "Book",
+            "isbn": "B0GC8Z175L", 
+            "bookFormat": "https://schema.org/EBook"
+          },
+          "url": "https://www.sederacybooks.com",
+          "image": "https://www.sederacybooks.com/EMCover1.jpg",
+          "description": "The Elementless Magician Series"
+        }
+        </script>
+    </fragment>
     <main>
-        
         <section class="relative py-20 md:py-32 px-6 overflow-hidden bg-void-900 border-b border-void-700 min-h-[80vh] flex items-center">
              <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 

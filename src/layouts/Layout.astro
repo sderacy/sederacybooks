@@ -19,8 +19,19 @@ const { title } = Astro.props;
         <meta charset="UTF-8" />
         <meta name="description" content="The official site of S.E. Deracy" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.png" />
         <meta name="generator" content={Astro.generator} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={Astro.url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content="The official site of S.E. Deracy and The Elementless Magician." />
+        <meta property="og:image" content="https://www.sederacybooks.com/EMCover1.jpg" /> <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={Astro.url} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content="The official site of S.E. Deracy and The Elementless Magician." />
+        <meta property="twitter:image" content="https://www.sederacybooks.com/EMCover1.jpg" />
+        <meta name="google-site-verification" content="czRebzHlVhaxI-YKa766q9E07cF7KifVgaUlnROqT0I" />
+        <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+        <link rel="icon" type="image/svg+xml" href="/favicon.png" />
         <script is:inline>
             (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
             .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
@@ -28,6 +39,7 @@ const { title } = Astro.props;
             (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
             ml('account', '2031010');
         </script>
+        <slot name="head" />
         <title>{title}</title>
     </head>
     <body class="bg-void-800 text-magic-light font-sans antialiased min-h-screen">
