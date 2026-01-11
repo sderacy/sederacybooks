@@ -33,12 +33,12 @@ import { library } from '../data/books';
                                             {series.title}
                                         </a>
                                     </h2>
-                                    <p class="text-gray-400 text-base mb-6 max-w-2xl line-clamp-3">
-                                        {series.description}
+                                    <p class="text-gray-400 text-base mb-6 max-w-2xl">
+                                        {latestBook.description}
                                     </p>
                                 </div>
                                 <div class="flex flex-wrap gap-4 mt-4">
-                                    <a href={latestBook.amazonLink} target="_blank" class="btn-primary text-sm px-6">
+                                    <a href={latestBook.amazonLink} target="_blank" class="btn-primary bg-gold text-void-900 hover:bg-white border-none">
                                         Buy on Amazon
                                     </a>
                                     <a href={`/${series.id}`} class="btn-secondary text-sm px-6">
