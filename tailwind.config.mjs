@@ -20,7 +20,6 @@ export default {
 				}
 			},
 			fontFamily: {
-				// "Cinzel" for headings, "Inter" for body
 				serif: ['Cinzel', 'serif'], 
 				sans: ['Inter', 'sans-serif'],
 			},
