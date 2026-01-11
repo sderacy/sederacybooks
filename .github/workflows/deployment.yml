@@ -23,8 +23,6 @@ jobs:
       
       - name: Install, build, and upload your site
         uses: withastro/action@v2
-        with:
-            site-url: https://www.sederacybooks.com
 
   deploy:
     needs: build
