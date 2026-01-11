@@ -27,7 +27,7 @@ export default function MapViewer() {
     const bounds: L.LatLngBoundsExpression = [[0, 0], [mapSize, mapSize]];
 
     return (
-        <div className="w-full max-w-[80vh] aspect-square mx-auto relative z-0 outline-none ring-0">
+        <div className="w-full h-[80vh] md:h-[85vh] mx-auto relative z-0 outline-none ring-0">
             <MapContainer 
                 crs={L.CRS.Simple} 
                 bounds={bounds} 
