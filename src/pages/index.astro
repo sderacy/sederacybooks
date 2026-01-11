@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { library} from '../data/books';
+import Newsletter from '../components/Newsletter.astro';
 
 const featuredSeries = library[0];
 const featuredBook = featuredSeries.books[0];
@@ -46,5 +47,6 @@ const featuredBook = featuredSeries.books[0];
                 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 rounded-full blur-3xl -z-0 pointer-events-none"></div>
              </div>
         </section>
-        </main>
+        <Newsletter />
+    </main>
 </Layout>
