@@ -16,11 +16,11 @@ const { series } = Astro.props;
     <main class="min-h-screen p-8 pt-24 max-w-5xl mx-auto">
         
         <header class="text-center mb-16">
-            <h1 class="heading-hero" style={`color: ${series.color}`}>{series.title}</h1>
-            <p class="text-body max-w-2xl mx-auto">{series.description}</p>
+            <h1 class="heading-hero text-lilac-dark dark:text-gold">{series.title}</h1>
+            <p class="text-body max-w-2xl mx-auto text-lg font-bold font-serif text-gray-900 dark:text-white">{series.description}</p>
             
             <div class="mt-8">
-                <a href="/map" class="btn-secondary inline-flex items-center gap-2">
+                <a href="/map" class="btn-secondary inline-flex items-center gap-2 text-gray-800 dark:text-white border-gray-900 dark:border-gray-300">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
                     </svg>
@@ -32,20 +32,21 @@ const { series } = Astro.props;
         <div class="space-y-24">
             {series.books.map((book, index) => (
                 <section class={`flex flex-col md:flex-row gap-12 items-start ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
+                    
                     <div class="w-full md:w-1/3 shrink-0">
-                        <div class="relative rounded-lg overflow-hidden shadow-2xl border border-void-700 bg-void-900 group">
+                        <div class="relative rounded-lg overflow-hidden shadow-2xl border border-gray-200 dark:border-void-700 bg-white dark:bg-void-900 group">
                             <img src={book.cover} alt={book.title} class="w-full h-auto object-contain" />
                         </div>
 
                         {book.credits && (
-                            <div class="mt-6 text-center text-xs text-gray-600 font-mono uppercase tracking-wider space-y-2">
+                            <div class="mt-6 text-center text-xs text-gray-500 dark:text-gray-600 font-mono uppercase tracking-wider space-y-2">
                                 {book.credits.coverArt && (
                                     <p>
-                                        <span class="text-gray-500">Cover art by</span>{' '}
+                                        <span class="text-gray-400 dark:text-gray-500">Cover art by</span>{' '}
                                         {typeof book.credits.coverArt === 'string' ? (
-                                            <span class="text-gray-400">{book.credits.coverArt}</span>
+                                            <span class="text-gray-600 dark:text-gray-400">{book.credits.coverArt}</span>
                                         ) : (
-                                            <a href={book.credits.coverArt.url} target="_blank" rel="noopener noreferrer" class="text-gold hover:text-white transition border-b border-gold/30 hover:border-white">
+                                            <a href={book.credits.coverArt.url} target="_blank" rel="noopener noreferrer" class="text-lilac-dark dark:text-gold hover:text-black dark:hover:text-white transition border-b border-lilac/30 dark:border-gold/30 hover:border-black dark:hover:border-white">
                                                 {book.credits.coverArt.name}
                                             </a>
                                         )}
@@ -53,11 +54,11 @@ const { series } = Astro.props;
                                 )}
                                 {book.credits.editing && (
                                     <p>
-                                        <span class="text-gray-500">Edited by</span>{' '}
+                                        <span class="text-gray-400 dark:text-gray-500">Edited by</span>{' '}
                                         {typeof book.credits.editing === 'string' ? (
-                                            <span class="text-gray-400">{book.credits.editing}</span>
+                                            <span class="text-gray-600 dark:text-gray-400">{book.credits.editing}</span>
                                         ) : (
-                                            <a href={book.credits.editing.url} target="_blank" rel="noopener noreferrer" class="text-gold hover:text-white transition border-b border-gold/30 hover:border-white">
+                                            <a href={book.credits.editing.url} target="_blank" rel="noopener noreferrer" class="text-lilac-dark dark:text-gold hover:text-black dark:hover:text-white transition border-b border-lilac/30 dark:border-gold/30 hover:border-black dark:hover:border-white">
                                                 {book.credits.editing.name}
                                             </a>
                                         )}
@@ -65,11 +66,11 @@ const { series } = Astro.props;
                                 )}
                                 {book.credits.typography && (
                                     <p>
-                                        <span class="text-gray-500">Formatted by</span>{' '}
+                                        <span class="text-gray-400 dark:text-gray-500">Formatted by</span>{' '}
                                         {typeof book.credits.typography === 'string' ? (
-                                            <span class="text-gray-400">{book.credits.typography}</span>
+                                            <span class="text-gray-600 dark:text-gray-400">{book.credits.typography}</span>
                                         ) : (
-                                            <a href={book.credits.typography.url} target="_blank" rel="noopener noreferrer" class="text-gold hover:text-white transition border-b border-gold/30 hover:border-white">
+                                            <a href={book.credits.typography.url} target="_blank" rel="noopener noreferrer" class="text-lilac-dark dark:text-gold hover:text-black dark:hover:text-white transition border-b border-lilac/30 dark:border-gold/30 hover:border-black dark:hover:border-white">
                                                 {book.credits.typography.name}
                                             </a>
                                         )}
@@ -78,21 +79,23 @@ const { series } = Astro.props;
                             </div>
                         )}
                     </div>
+
                     <div class="w-full md:w-2/3 text-center md:text-left">
-                        <span class="text-white font-bold tracking-widest text-sm uppercase mb-2 block">
+                        <span class="text-gray-900 dark:text-white font-bold tracking-widest text-sm uppercase mb-2 block">
                             {book.isReleased ? 'Available Now' : book.releaseDate}
                         </span>
-                        <h2 class="text-4xl font-serif text-gold mb-4">Book {index + 1}: {book.title}</h2>
-                        <p class="text-gray-400 leading-relaxed mb-8 text-md whitespace-pre-line">
+                        <h2 class="text-4xl font-serif text-lilac-dark dark:text-gold mb-4">Book {index + 1}: {book.title}</h2>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-8 text-lg whitespace-pre-line">
                             {book.description}
                         </p>
+                        
                         <div>
                             {book.isReleased ? (
-                                <a href={book.amazonLink} target="_blank" rel="noopener noreferrer" class="btn-primary bg-gold text-void-900 hover:bg-white border-none inline-block px-8">
+                                <a href={book.amazonLink} target="_blank" rel="noopener noreferrer" class="btn-primary bg-lilac-dark dark:bg-gold text-white dark:text-void-900 hover:opacity-90 border-none inline-block px-8">
                                     Buy on Amazon
                                 </a>
                             ) : (
-                                <button disabled class="px-8 py-3 rounded-lg font-sans font-medium text-gray-500 border border-gray-700 cursor-not-allowed">
+                                <button disabled class="px-8 py-3 rounded-lg font-sans font-medium text-gray-400 dark:text-gray-500 border border-gray-300 dark:border-gray-700 cursor-not-allowed bg-gray-100 dark:bg-void-800">
                                     Coming Soon
                                 </button>
                             )}

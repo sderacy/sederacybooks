@@ -4,27 +4,28 @@ import MapViewer from '../components/MapViewer';
 import { library } from '../data/books';
 
 const series = library.find(s => s.id === 'elementless-magician');
-const seriesColor = series ? series.color : '#d2ac22';
+const seriesColor = series ? series.color : '#d2ac22'; 
 const backLink = series ? `/${series.id}` : '/';
 ---
 
 <Layout title="Atlas of Eurion | The Elementless Magician">
         
-        <main class="w-full px-0 md:px-0 pt-24 pb-12">
-            <header class="mb-8 text-center">
+        <main class="w-full px-0 md:px-0 pt-24 min-h-screen bg-white dark:bg-void-900 transition-colors duration-500">
+            
+            <header class="mb-8 text-center px-6">
                 <h1 
-                    class="heading-hero mb-2" 
-                    style={`color: ${seriesColor}`}
+                    class="heading-hero mb-2 text-lilac-dark dark:text-gold" 
                 >
                     The Lands of Eurion
                 </h1>
-                <p class="text-gray-400 text-lg">
+                
+                <p class="text-gray-600 dark:text-gray-400 text-lg">
                     Explore the world charted by
                     <a 
                         href="https://www.fiverr.com/penanegra" 
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        class="text-gold hover:text-white transition-colors underline underline-offset-4 decoration-1"
+                        class="text-lilac-dark dark:text-gold hover:text-black dark:hover:text-white transition-colors duration-300 border-b border-lilac/60 dark:border-gold/60 hover:border-black dark:hover:border-white"
                         style={`text-decoration-color: ${seriesColor}`}
                     >
                         Milton Pena Negra.
@@ -32,8 +33,9 @@ const backLink = series ? `/${series.id}` : '/';
                 </p>
             </header>
             
-            <section class="w-full bg-void-800 border-y border-void-700 shadow-2xl">
+            <section class="w-full bg-white dark:bg-void-800 border-y border-gray-200 dark:border-void-700 shadow-xl transition-colors duration-500">
                 <MapViewer client:only="react" />
             </section>
+        
         </main>
 </Layout>

@@ -8,53 +8,33 @@ const featuredBook = featuredSeries.books[0];
 ---
 
 <Layout title="S.E. Deracy | Author & Engineer">
-    <fragment slot="head">
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Book",
-          "name": "The Elementless Magician",
-          "author": {
-            "@type": "Person",
-            "name": "S.E. Deracy",
-            "url": "https://www.sederacybooks.com"
-          },
-          "workExample": {
-            "@type": "Book",
-            "isbn": "B0GC8Z175L", 
-            "bookFormat": "https://schema.org/EBook"
-          },
-          "url": "https://www.sederacybooks.com",
-          "image": "https://www.sederacybooks.com/EMCover1.jpg",
-          "description": "The Elementless Magician Series"
-        }
-        </script>
-    </fragment>
-    <main>
-        <section class="relative py-20 md:py-32 px-6 overflow-hidden bg-void-900 border-b border-void-700 min-h-[80vh] flex items-center">
+    <main class="min-h-screen relative overflow-hidden bg-light-bg dark:bg-void-900 transition-colors duration-500">
+        <section class="relative py-20 md:py-32 px-6 overflow-hidden bg-light-bg dark:bg-void-900 border-b border-gray-200 dark:border-void-700 min-h-[80vh] flex items-center transition-colors duration-500">
             <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1 text-center md:text-left z-10">
-                    <span class="text-gold font-bold tracking-[0.2em] text-xs uppercase mb-4 block">
+                    <span class="text-lilac-dark dark:text-gold font-bold tracking-[0.2em] text-xs uppercase mb-4 block">
                         Latest Release
                     </span>
-                    <h1 class="text-5xl md:text-7xl font-serif text-white font-bold mb-8 leading-none">
+                    <h1 class="text-5xl md:text-7xl font-serif text-light-text dark:text-white font-bold mb-8 leading-none">
                         The Elementless <br/>
-                        <span class="text-gold">Magician</span>
+                        <span class="text-lilac-dark dark:text-gold">Magician</span>
                     </h1>
+                    
                     <div class="max-w-xl mx-auto md:mx-0 mb-10">        
                         {featuredBook.quote && (
-                            <p class="text-white text-2xl md:text-3xl italic font-serif mb-6 leading-snug">
+                            <p class="text-gray-900 dark:text-white text-2xl md:text-3xl italic font-serif mb-6 leading-snug">
                                 "{featuredBook.quote}"
                             </p>
                         )}
-                        <p class="text-xl text-gray-300 leading-relaxed mb-8">
+                        <p class="text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
                             {featuredBook.shortDescription}
                         </p>
+                        
                         <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                            <a href={featuredBook.amazonLink} target="_blank" class="btn-primary bg-gold text-void-900 hover:bg-white border-none">
+                            <a href={featuredBook.amazonLink} target="_blank" rel="noopener noreferrer" class="btn-primary bg-lilac-dark dark:bg-gold text-white dark:text-void-900 hover:opacity-90 transition-opacity border-none">
                                 Buy Now
                             </a>
-                            <a href={`/${featuredSeries.id}`} class="btn-secondary">
+                            <a href={`/${featuredSeries.id}`} class="btn-secondary text-gray-800 dark:text-white border-gray-900 dark:border-gray-300 hover:border-lilac dark:hover:border-gold">
                                 Read More
                             </a>
                         </div>
@@ -70,10 +50,9 @@ const featuredBook = featuredSeries.books[0];
                         />
                     </div>
                 </div>
-
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gold/5 rounded-full blur-3xl -z-0 pointer-events-none"></div>
              </div>
         </section>
+        
         <section id="newsletter">
             <Newsletter />
         </section>

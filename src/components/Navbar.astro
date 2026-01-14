@@ -1,4 +1,6 @@
 ---
+import ThemeToggle from "./ThemeToggle.astro";
+
 const navLinks = [
   { name: 'About', href: '/about' },
   { name: 'Books', href: '/books'},
@@ -6,10 +8,9 @@ const navLinks = [
 ];
 ---
 
-<header class="fixed w-full top-0 z-50 bg-void-900/90 backdrop-blur-sm border-b border-white/10 transition-all duration-300">
+<header class="fixed w-full top-0 z-50 bg-white/90 dark:bg-void-900/90 backdrop-blur-sm border-b border-gray-200 dark:border-white/10 transition-colors duration-300">
   <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-    
-    <a href="/" class="text-xl md:text-2xl font-serif font-bold text-gold tracking-tighter hover:opacity-80 transition">
+    <a href="/" class="text-xl md:text-2xl font-serif font-bold text-lilac-dark dark:text-gold tracking-tighter hover:opacity-80 transition">
       S.E. DERACY
     </a>
 
@@ -17,24 +18,31 @@ const navLinks = [
       {navLinks.map(link => (
         <a 
             href={link.href} 
-            class="text-sm font-sans tracking-widest text-gray-300 hover:text-gold uppercase transition-colors"
+            class="text-sm font-sans tracking-widest text-gray-900 dark:text-gray-300 hover:text-lilac-dark dark:hover:text-gold uppercase transition-colors"
         >
             {link.name}
         </a>
       ))}
+      <div class="border-l border-gray-300 dark:border-gray-700 pl-6 ml-2">
+          <ThemeToggle />
+      </div>
     </nav>
 
-    <div class="md:hidden group relative">
-        <button class="text-white p-2">
-             <span class="sr-only">Menu</span>
-             ☰
-        </button>
-        <div class="absolute right-0 top-full mt-2 w-48 bg-void-900 border border-void-700 rounded shadow-xl hidden group-hover:block hover:block">
-            {navLinks.map(link => (
-                <a href={link.href} class="block px-4 py-3 text-white hover:bg-void-800 border-b border-void-800 last:border-0">
-                    {link.name}
-                </a>
-            ))}
+    <div class="md:hidden flex items-center gap-4">
+        <ThemeToggle />
+        
+        <div class="group relative">
+            <button class="text-gray-800 dark:text-white p-2">
+                 <span class="sr-only">Menu</span>
+                 ☰
+            </button>
+            <div class="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-void-900 border border-gray-200 dark:border-void-700 rounded shadow-xl hidden group-hover:block hover:block">
+                {navLinks.map(link => (
+                    <a href={link.href} class="block px-4 py-3 text-gray-800 dark:text-white hover:bg-gray-100 dark:hover:bg-void-800 border-b border-gray-100 dark:border-void-800 last:border-0">
+                        {link.name}
+                    </a>
+                ))}
+            </div>
         </div>
     </div>
   </div>

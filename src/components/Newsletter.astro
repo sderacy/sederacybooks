@@ -1,41 +1,30 @@
 ---
 ---
 
-<section id="newsletter" class="py-24 px-6 bg-void-900 border-t border-void-800 relative overflow-hidden">
-    
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none">
-        <svg width="600" height="600" viewBox="0 0 512 512" fill="none" class="text-gold animate-spin-slow">
+<section id="newsletter" class="py-24 px-6 bg-light-bg dark:bg-void-900 border-t border-gray-200 dark:border-void-800 relative overflow-hidden transition-colors duration-500">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10 dark:opacity-5 pointer-events-none">
+        <svg width="600" height="600" viewBox="0 0 512 512" fill="none" class="text-lilac-dark dark:text-gold animate-spin-slow">
              <circle cx="256" cy="256" r="250" stroke="currentColor" stroke-width="2" stroke-dasharray="20 20"/>
              <circle cx="256" cy="256" r="150" stroke="currentColor" stroke-width="1"/>
         </svg>
     </div>
 
     <div class="max-w-4xl mx-auto text-center relative z-10">
-        <span class="text-gold font-bold tracking-[0.2em] text-xs uppercase mb-4 block">
+        <span class="text-lilac-dark dark:text-gold font-bold tracking-[0.2em] text-xs uppercase mb-4 block">
             The Inner Circle
         </span>
         
-        <h2 class="text-4xl md:text-5xl font-serif text-white mb-6">
+        <h2 class="text-4xl md:text-5xl font-serif text-gray-900 dark:text-white mb-6">
             Join the Council
         </h2>
         
-        <p class="text-gray-400 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
-            Be the first to uncover new maps, secret lore, and release dates. 
+        <p class="text-gray-600 dark:text-gray-400 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
+            Be the first to uncover new maps, secret lore, and release dates.
             <br class="hidden md:block" />
-            <span class="text-gold">Sign up now to receive Chapter 1 of <em>The Elementless Magician</em> for free.</span>
+            <span class="text-lilac-dark dark:text-gold font-bold">Sign up now to receive Chapter 1 of <em>The Elementless Magician</em> for free.</span>
         </p>
 
         <div class="ml-embedded" data-form="lBGyb4"></div>
 
     </div>
 </section>
-
-<style>
-    @keyframes spin-slow {
-        from { transform: translate(-50%, -50%) rotate(0deg); }
-        to { transform: translate(-50%, -50%) rotate(360deg); }
-    }
-    .animate-spin-slow {
-        animation: spin-slow 60s linear infinite;
-    }
-</style>

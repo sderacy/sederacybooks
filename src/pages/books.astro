@@ -6,8 +6,8 @@ import { library } from '../data/books';
 <Layout title="Books | S.E. Deracy">
     <main class="pt-32 pb-24 px-6 min-h-screen">
         <div class="max-w-6xl mx-auto"> <header class="mb-16 text-center">
-                <h1 class="heading-hero text-gold mb-4">The Bookshelf</h1>
-                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                <h1 class="heading-hero text-lilac-dark dark:text-gold mb-4">The Bookshelf</h1>
+                <p class="text-gray-900 dark:text-white text-lg max-w-2xl mx-auto">
                     Tales from the Elementless universe and beyond.
                 </p>
             </header>
@@ -16,38 +16,54 @@ import { library } from '../data/books';
                 {library.map((series) => {
                     const latestBook = series.books[0];
                     return (
-                        <div class="bg-void-900 border border-void-700 rounded-xl flex flex-col md:flex-row shadow-xl overflow-hidden group hover:border-gold/50 transition-colors duration-500">
-                            
-                            <a href={`/${series.id}`} class="block w-full md:w-64 shrink-0 bg-void-800 relative">
-                                 <img 
-                                    src={latestBook.cover} 
-                                    alt={latestBook.title} 
-                                    class="w-full h-full object-contain p-2 group-hover:scale-105 transition duration-500" 
-                                />
-                            </a>
+                        <div
+                            class="rounded-xl flex flex-col md:flex-row shadow-xl overflow-hidden group transition-colors duration-500
+                            bg-white border border-lilac-200 hover:border-lilac-400
+                            dark:bg-void-900 dark:border-void-700 dark:hover:border-gold/50"
+                        >
+    
+    <a href={`/${series.id}`} class="block w-full md:w-64 shrink-0 relative
+        bg-grey-50 dark:bg-void-800">
+        <img 
+            src={latestBook.cover} 
+            alt={latestBook.title} 
+            class="w-full h-full object-contain p-2 group-hover:scale-105 transition duration-500" 
+        />
+    </a>
 
-                            <div class="p-8 flex flex-col justify-center flex-grow border-l border-void-800">
-                                <div class="mb-auto">
-                                    <h3 class="text-gray-500 text-xs uppercase tracking-widest mb-2">Series</h3>
-                                    <h2 class="text-3xl font-serif text-white mb-4">
-                                        <a href={`/${series.id}`} class="hover:text-gold transition">
-                                            {series.title}
-                                        </a>
-                                    </h2>
-                                    <p class="text-gray-400 text-base mb-6 max-w-2xl leading-relaxed line-clamp-4">
-                                        {latestBook.shortDescription || latestBook.description}
-                                    </p>
-                                </div>
-                                <div class="flex flex-wrap gap-4 mt-2">
-                                    <a href={latestBook.amazonLink} target="_blank" class="btn-primary bg-gold text-void-900 hover:bg-white border-none py-2 px-6 text-sm">
-                                        Buy on Amazon
-                                    </a>
-                                    <a href={`/${series.id}`} class="btn-secondary text-sm px-6 py-2">
-                                        Series Info
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+    <div class="p-8 flex flex-col justify-center flex-grow 
+        border-l border-lilac-100 dark:border-void-800">
+        <div class="mb-auto">
+            <h3 class="text-xs uppercase tracking-widest mb-2
+                text-gray-500 dark:text-gray-500">Series</h3>
+            
+            <h2 class="text-3xl font-serif mb-4
+                text-grey-800 dark:text-white">
+                <a href={`/${series.id}`} class="transition
+                    hover:text-lilac-400 dark:hover:text-gold">
+                    {series.title}
+                </a>
+            </h2>
+            
+            <p class="text-base mb-6 max-w-2xl leading-relaxed line-clamp-4
+                text-gray-700 dark:text-gray-400">
+                {latestBook.shortDescription || latestBook.description}
+            </p>
+        </div>
+        
+        <div class="flex flex-wrap gap-4 mt-2">
+            <a href={latestBook.amazonLink} target="_blank" class="btn-primary border-none py-2 px-6 text-sm
+                bg-lilac-400 text-white hover:bg-lilac-200
+                dark:bg-gold dark:text-void-900 dark:hover:bg-white">
+                Buy on Amazon
+            </a>
+            <a href={`/${series.id}`} class="btn-secondary text-sm px-6 py-2
+                 text-gray-800 dark:text-white border-gray-900 dark:border-gray-300 dark:hover:border-gold hover:border-lilac">
+                Series Info
+            </a>
+        </div>
+    </div>
+</div>
                     );
                 })}
             </div>
