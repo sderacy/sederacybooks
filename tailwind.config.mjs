@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	darkMode: 'class',
 	theme: {
 		extend: {
 			colors: {
@@ -17,7 +18,14 @@ export default {
 				gold: {
 					DEFAULT: '#d2ac22',
 					dim: '#b08d1a', // Title Color
-				}
+				},
+				light: {
+                    bg: '#f3f4f6',      // Light Gray background
+                    card: '#ffffff',    // White cards
+                    text: '#1f2937',    // Dark Gray text
+                },
+				lilac: '#a78bfa', 
+    			'lilac-dark': '#7c3aed'
 			},
 			fontFamily: {
 				serif: ['Cinzel', 'serif'], 
