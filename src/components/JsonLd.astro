@@ -1,0 +1,22 @@
+---
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "The Elementless Magician",
+  "author": {
+    "@type": "Person",
+    "name": "S.E. Deracy",
+    "url": "https://www.sederacybooks.com"
+  },
+  "workExample": {
+    "@type": "Book",
+    "isbn": "B0GC8Z175L", 
+    "bookFormat": "https://schema.org/EBook"
+  },
+  "url": "https://www.sederacybooks.com",
+  "image": "https://www.sederacybooks.com/EMCover1.jpg",
+  "description": "The Elementless Magician Series"
+};
+---
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
