@@ -5,8 +5,17 @@ const currentYear = new Date().getFullYear();
 <footer class="bg-white dark:bg-black border-t border-gray-200 dark:border-void-800 pt-16 pb-8 text-center md:text-left relative z-10 transition-colors duration-500">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">   
         <div class="md:col-span-2">
-            <a href="/" class="text-2xl font-serif font-bold text-lilac-dark dark:text-gold tracking-tighter hover:opacity-80 transition block mb-4">
-                S.E. DERACY
+            <a href="/" class="inline-block hover:opacity-80 transition-opacity shrink-0">  
+                <img 
+                    src="/logo-light.png" 
+                    alt="S.E. Deracy" 
+                    class="w-auto object-contain block dark:hidden h-[clamp(60px,10vw,90px)]" 
+                />
+                <img 
+                    src="/logo-dark.png" 
+                    alt="S.E. Deracy" 
+                    class="w-auto object-contain hidden dark:block h-[clamp(60px,10vw,90px)]" 
+                />
             </a>
             <p class="text-gray-600 dark:text-gray-400 max-w-sm mx-auto md:mx-0 leading-relaxed">
                 Weaving worlds with code and chaos. Architect of the <em>Elementless</em> universe.
