@@ -36,6 +36,8 @@ export default function MapViewer() {
                 scrollWheelZoom={true} 
                 className="h-full w-full bg-transparent dark:bg-void-800 outline-none transition-colors duration-500"
                 style={{ outline: 'none' }}
+                maxBounds={bounds}
+                maxBoundsViscosity={1.0}
             >
                 <ImageOverlay url="/Eurion.png" bounds={bounds} />
                 {locations
