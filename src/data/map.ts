@@ -13,7 +13,7 @@ export const CATEGORY_STYLES: Record<string, { icon: string, legend: string }> =
     },
     "Mysteries": {
         icon: "text-blue-500 dark:text-cyan-400",
-        legend: "bg-blue-500 dark:bg-cyan-400"
+        legend: "bg-blue-500 dark:bg-cyan-600"
     }
 };
 
@@ -29,7 +29,7 @@ export interface MapLocation {
     name: string;
     coords: [number, number];
     category: string;
-    description: string;
+    description?: string;
 }
 
 export const locations: MapLocation[] = [
@@ -38,6 +38,5 @@ export const locations: MapLocation[] = [
         name: "???",
         coords: [2000, 2000],
         category: "Mysteries",
-        description: "???"
     }
 ];

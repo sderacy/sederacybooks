@@ -54,11 +54,11 @@ export default function MapViewer() {
                                     {loc.category}
                                 </span>
 
-                                <h3 className="text-xl font-bold font-cinzel text-white mb-2 leading-none">
+                                <h3 className="text-xl font-serif text-white mb-2 leading-none">
                                     {loc.name}
                                 </h3>
 
-                                <p className="font-body text-sm leading-relaxed text-gray-300">
+                                <p className="text-sm leading-relaxed text-gray-300">
                                     {loc.description}
                                 </p>
 
@@ -69,7 +69,7 @@ export default function MapViewer() {
             </MapContainer>
 
             <div className="absolute top-4 right-4 z-[1000] bg-white/95 dark:bg-void-900/95 backdrop-blur-sm p-4 rounded shadow-xl border border-gray-200 dark:border-void-700 max-w-[200px]">
-                <h4 className="font-cinzel text-sm font-bold uppercase tracking-widest mb-3 text-gray-900 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-2">
+                <h4 className="font-serif text-sm font-bold uppercase tracking-widest mb-3 text-gray-900 dark:text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-2">
                     Map Legend
                 </h4>
                 <div className="flex flex-col gap-2">
