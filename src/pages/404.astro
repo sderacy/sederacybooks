@@ -4,8 +4,13 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="404: The Void | S.E. Deracy">
     <main class="min-h-screen flex flex-col items-center justify-center text-center px-6 relative overflow-hidden bg-light-bg dark:bg-void-900 transition-colors duration-500">
-        <div class="absolute inset-0">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-lilac/10 dark:bg-gold/5 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-40 dark:opacity-20 animate-void-spin">
+                <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-lilac-dark/40 dark:bg-purple-900/50 rounded-full blur-[100px] mix-blend-multiply dark:mix-blend-screen"></div>
+                <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gold/40 dark:bg-void-800/80 rounded-full blur-[100px] mix-blend-multiply dark:mix-blend-screen"></div>
+                <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-lilac-dark/40 dark:bg-gold/20 rounded-full blur-[100px] mix-blend-multiply dark:mix-blend-screen"></div>
+            </div>
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-white/50 dark:bg-black/50 rounded-full blur-[80px]"></div>
         </div>
 
         <div class="relative z-10 max-w-lg">
@@ -25,6 +30,5 @@ import Layout from '../layouts/Layout.astro';
                 </a>
             </div>
         </div>
-
     </main>
 </Layout>
