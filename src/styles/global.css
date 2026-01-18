@@ -5,7 +5,7 @@
 @layer components {
 
   .heading-hero {
-    @apply font-serif font-bold text-5xl text-magic tracking-wider mb-4 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)];
+    @apply font-serif font-bold text-5xl text-magic tracking-wider mb-4;
   }
   
   @screen md {
