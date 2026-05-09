@@ -35,9 +35,9 @@ export const library: Series[] = [
         id: 'elementless-magician',
         title: 'The Elementless Magician Series',
         description: 'The five-book story of Abel Velaris and the Void that binds him.',
-        framingBlock: `In the world of Eurion, magic flows through the Pentad — five elements, five Great Houses, five legacies passed from parent to child. Abel Velaris was born into the highest of them, heir of House Velaris alongside his twin brother Cain.
+        framingBlock: `In the world of Eurion, magic flows through the Pentad: five elements, five Great Houses, five legacies passed from parent to child. Abel Velaris was born into the highest of them, heir of House Velaris alongside his twin brother Cain.
 
-He never inherited an element. On the night of his Attunement, the Pentad refused him in front of his entire House, and the boy meant to lead a dynasty walked out of the chamber as the first elementless mage the Houses had ever named — bound, in ways no one yet understands, to a power older than the system that just unmade him. The Elementless Magician is a five-book series about that refusal, what Abel chooses to do with it, and what it costs the people he leaves behind.`,
+He never inherited an element. On the night of his Attunement, the Pentad refused him in front of his entire House, and the boy meant to lead a dynasty walked out of the chamber as the first elementless mage the Houses had ever named. Little did he know he would be bound, in ways no one yet understands, to a power older than the system that just unmade him. The Elementless Magician is a five-book series about that refusal, what Abel chooses to do with it, and what it costs the people he leaves behind.`,
         color: '#d2ac22',
         books: [
             {
@@ -49,9 +49,9 @@ He never inherited an element. On the night of his Attunement, the Pentad refuse
 
 On the night of his Attunement, it refused him. Abel walked out of the chamber without his title, branded with a single word: Elementless.
 
-His emptiness is not what the Houses believe. Abel is not powerless — he is bound to a force older than the Pentad, one the Houses long ago erased from their teaching. They call it the Void.
+His emptiness is not what the Houses believe. Abel is not powerless; he is bound to a force older than the Pentad, one the Houses long ago erased from their teaching. They call it the Void.
 
-Now Abel must learn what the Void is, what it wants, and what it costs to wield — and whether the world that refused him deserves the power it accidentally placed in his hands.`,
+Now Abel must learn what the Void is, what it wants, what it costs to wield, and whether the world that refused him deserves the power it accidentally placed in his hands.`,
                 amazonLink: 'https://www.amazon.com/dp/B0GC8Z175L',
                 isReleased: true,
                 releaseDate: 'Available Now',
@@ -73,7 +73,7 @@ Now Abel must learn what the Void is, what it wants, and what it costs to wield 
             {
                 title: 'The Hollow Sovereign',
                 shortDescription: `At the call of Merlin and the Old Sage, Abel sets out for Camlann — where the answers to his power may be waiting.`,
-                description: `At the call of Merlin and the Old Sage, Abel sets out for Camlann — a city across Eurion where the answers to his power may be waiting. What he finds there are allies he never expected, enemies he is not ready to fight, and a continent that runs by rules nothing in House Velaris prepared him for. The Hollow Sovereign is faster and harder than the first book, and the moment the world of the series opens up.`,
+                description: `At the call of Merlin and the Old Sage, Abel sets out for Camlann — a city across the sands of Rheastra where the answers to his power may be waiting. What he finds there are allies he never expected, enemies he is not ready to fight, and a continent that runs by rules nothing in House Velaris prepared him for. The Hollow Sovereign is faster and harder than the first book, and the moment the world of the series opens up.`,
                 isReleased: false,
                 releaseDate: 'December 2026',
             }
